@@ -1,0 +1,4 @@
+nano 1-listit
+#!/bin/bash
+ls
+
