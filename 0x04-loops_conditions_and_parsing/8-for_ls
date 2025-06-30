@@ -1,6 +1,10 @@
-#!/usr/bin/env bash
-# ls using for loop
+#!/bin/bash
 
+# For each file in the current directory (excluding hidden files)
 for file in *; do
-  echo "$file" | cut -d '-' -f 2;
+  # Check that it is a regular file or directory (optional)
+  if [[ -f "$file" || -d "$file" ]]; then
+    # Remove everything up to the first dash, if it exists
+    echo "${file#*-}"
+  fi
 done
